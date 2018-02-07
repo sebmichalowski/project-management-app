@@ -1,6 +1,8 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 
+/log/
+
 ### STS ###
 .apt_generated
 .classpath
@@ -22,3 +24,18 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+### Package Files ###
+*.jar
+*.war
+*.ear
+*.db
+
+### MacOS ###
+.DS_Store
+.svn
+
+######################
+# Logs
+######################
+*.log
