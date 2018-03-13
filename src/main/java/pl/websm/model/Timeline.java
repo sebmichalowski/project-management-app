@@ -10,7 +10,7 @@ import java.util.Set;
 @Data
 @EqualsAndHashCode(exclude = {"projects"})
 @Entity
-public class Timeline {
+public class Timeline implements Comparable<Timeline>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,5 +24,10 @@ public class Timeline {
 
     public Timeline() {
         projects = new HashSet<>();
+    }
+
+    @Override
+    public int compareTo(Timeline o) {
+        return this.getPositionIndex().compareTo(o.getPositionIndex());
     }
 }
