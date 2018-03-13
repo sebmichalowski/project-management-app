@@ -3,11 +3,9 @@ package pl.websm.model;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.time.*;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 
 import static org.junit.Assert.*;
 

@@ -1,6 +1,5 @@
 package pl.websm.repository;
 
-import org.hibernate.annotations.LazyToOne;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 import pl.websm.model.Dashboard;

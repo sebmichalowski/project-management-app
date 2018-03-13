@@ -5,8 +5,6 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.*;
 
 @Data
 @EqualsAndHashCode
