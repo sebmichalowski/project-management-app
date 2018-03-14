@@ -15,7 +15,7 @@ import pl.websm.service.ProjectService;
 import pl.websm.service.TimelineService;
 import pl.websm.service.UserService;
 
-import java.util.Set;
+import java.util.*;
 
 @Component
 public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent>{
@@ -53,15 +53,24 @@ public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent>{
 
         System.out.println(user.toString());
 
-        Project project1 = projectService.findById(1L);
-        project1.setDescription("abc 2");
-        projectRepository.save(project1);
+//        Project project1 = projectService.findById(5L);
+//        project1.setDescription("abc 2");
+//        projectRepository.save(project1);
+//
+//        Timeline timeline1 = timelineService.findById(4L);
+//        Set<Project> projects = timeline1.getProjects();
+//        Project project2 = new Project();
+//        project2.setDescription("second project");
+//        projects.add(project2);
+//        timelineRepository.save(timeline1);
 
-        Timeline timeline1 = timelineService.findById(1L);
-        Set<Project> projects = timeline1.getProjects();
-        Project project2 = new Project();
-        project2.setDescription("second project");
-        projects.add(project2);
-        timelineRepository.save(timeline1);
+        User user1 = userService.findById(1L);
+        Set<Timeline> timelines1 =  user1.getDashboard().getDashboardTimelines();
+        List<Timeline> sortedTimeline1 = new ArrayList<>(timelines1);
+        Collections.sort(sortedTimeline1);
+        Iterator iterator = sortedTimeline1.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next().toString());
+        }
     }
 }
