@@ -23,7 +23,7 @@ public class ProjectServiceImpl implements ProjectService {
         Optional<Project> projectOptional = projectRepository.findById(id);
 
         if (!projectOptional.isPresent()) {
-            throw new NotFoundException("User Not Found. For ID value: " + id.toString() );
+            throw new NotFoundException("Project Not Found. For ID value: " + id.toString() );
         }
 
         return projectOptional.get();
